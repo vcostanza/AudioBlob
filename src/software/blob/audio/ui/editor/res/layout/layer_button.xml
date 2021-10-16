@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TrackLayerButton width="match_parent" height="wrap_content" orientation="horizontal" padding="@dimen/auto_padding"
+                  gravity="center_vertical" background="@color/background" borderColor="@color/gray85">
+    <LinearLayout width="wrap_content" height="wrap_content" orientation="vertical" marginRight="@dimen/auto_padding">
+        <ImageButton name="visibility_toggle" width="16px" height="16px" src="visibility_2"/>
+        <ImageButton name="volume_toggle" width="16px" height="16px" src="speaker_3"/>
+    </LinearLayout>
+    <LinearLayout width="0" height="wrap_content" weight="1" orientation="vertical">
+        <TextView name="name" width="wrap_content" height="wrap_content" text="Layer"/>
+    </LinearLayout>
+</TrackLayerButton>

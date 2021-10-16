@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <style name="toolbar_button">
+        <item name="width">32px</item>
+        <item name="height">32px</item>
+        <item name="padding">8px</item>
+        <item name="background">@color/background</item>
+    </style>
+    <style name="sidebar">
+        <item name="width">wrap_content</item>
+        <item name="height">match_parent</item>
+        <item name="orientation">vertical</item>
+    </style>
+    <style name="sidebar_button">
+        <item name="paddingLeft">@dimen/auto_padding</item>
+        <item name="paddingRight">@dimen/auto_padding</item>
+        <item name="paddingTop">@dimen/auto_margin</item>
+        <item name="paddingBottom">@dimen/auto_margin</item>
+        <item name="iconWidth">16px</item>
+        <item name="iconHeight">16px</item>
+        <item name="textSize">14px</item>
+        <item name="background">@color/background</item>
+    </style>
+    <style name="sidebar_container">
+        <item name="width">140px</item>
+        <item name="height">match_parent</item>
+        <item name="orientation">vertical</item>
+    </style>
+    <style name="sidebar_list">
+        <item name="width">match_parent</item>
+        <item name="height">0</item>
+        <item name="weight">1</item>
+        <item name="unitIncrement">16</item>
+        <item name="scrollbars">vertical</item>
+        <item name="background">@color/gray43</item>
+    </style>
+    <style name="tile_button">
+        <item name="width">wrap_content</item>
+        <item name="height">wrap_content</item>
+        <item name="orientation">vertical</item>
+        <item name="gravity">center_horizontal</item>
+        <item name="padding">@dimen/auto_margin</item>
+        <item name="background">@color/gray85</item>
+    </style>
+    <style name="tile_button_image">
+        <item name="width">48px</item>
+        <item name="height">48px</item>
+        <item name="marginBottom">@dimen/auto_margin</item>
+    </style>
+</resources>

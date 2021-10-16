@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="match_parent" height="wrap_content" orientation="vertical" padding="@dimen/auto_margin" background="@color/background">
+
+    <CheckBox name="rangeCB" text="Note Range" width="wrap_content" height="wrap_content"/>
+
+    <TableLayout width="match_parent" height="wrap_content">
+
+        <TableRow name="note" width="match_parent" height="wrap_content" gravity="center_vertical" marginTop="@dimen/auto_margin">
+            <TextView text="Note: " width="wrap_content" height="wrap_content"/>
+            <EditText width="0" height="wrap_content" weight="1"/>
+        </TableRow>
+
+        <TableRow name="minNote" width="match_parent" height="wrap_content" gravity="center_vertical" marginTop="@dimen/auto_margin" visibility="gone">
+            <TextView text="Min Note: " width="wrap_content" height="wrap_content"/>
+            <EditText  width="0" height="wrap_content" weight="1"/>
+        </TableRow>
+
+        <TableRow name="maxNote" width="match_parent" height="wrap_content" gravity="center_vertical" marginTop="@dimen/auto_margin" visibility="gone">
+            <TextView text="Max Note: " width="wrap_content" height="wrap_content"/>
+            <EditText width="0" height="wrap_content" weight="1"/>
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

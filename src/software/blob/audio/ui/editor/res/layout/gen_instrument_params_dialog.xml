@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="wrap_content" height="wrap_content" orientation="vertical">
+
+    <LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal" marginBottom="@dimen/auto_margin">
+        <TextView name="sampleType" text="File selected:" textColor="@color/gray160" marginRight="@dimen/auto_padding"/>
+        <TextView name="sampleName" text="%s"/>
+    </LinearLayout>
+
+    <LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal" gravity="center_vertical" marginBottom="@dimen/auto_margin">
+        <TextView text="Preset:" textColor="@color/gray160" marginRight="@dimen/auto_padding"/>
+        <ComboBox name="preset" width="wrap_content" height="wrap_content" focusable="false"/>
+    </LinearLayout>
+
+    <LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal">
+
+        <LinearLayout width="wrap_content" height="wrap_content" orientation="vertical" marginRight="@dimen/auto_margin">
+
+            <RadioGroup name="eachSample" width="wrap_content" height="wrap_content" orientation="vertical" marginBottom="@dimen/auto_margin">
+                <TextView text="Each sample" textColor="@color/gray160"/>
+                <RadioButton name="sameSample" text="Same"/>
+                <RadioButton name="randomSample" text="Random"/>
+            </RadioGroup>
+
+            <RadioGroup name="samplePitch" width="wrap_content" height="wrap_content" orientation="vertical" marginBottom="@dimen/auto_margin">
+                <TextView text="Pitch" textColor="@color/gray160"/>
+                <RadioButton name="defaultPitch" text="Default"/>
+                <RadioButton name="constantPitch" text="Constant"/>
+                <RadioButton name="randomPitch" text="Random"/>
+            </RadioGroup>
+
+            <RadioGroup name="timeOffset" width="wrap_content" height="wrap_content" orientation="vertical" marginBottom="@dimen/auto_margin">
+                <TextView text="Time offset" textColor="@color/gray160"/>
+                <RadioButton name="startOffset" text="Start"/>
+                <RadioButton name="randomOffset" text="Random"/>
+            </RadioGroup>
+
+            <TextView text="Duration" textColor="@color/gray160"/>
+            <CheckBox name="randomDur" text="Randomized"/>
+            <TableLayout width="wrap_content" height="wrap_content" orientation="vertical" marginLeft="@dimen/auto_padding">
+                <TableRow width="wrap_content" height="wrap_content" orientation="horizontal" gravity="center_vertical">
+                    <TextView text="Min:" textColor="@color/gray160" marginRight="@dimen/auto_padding"/>
+                    <EditText name="minDur" width="50px" height="wrap_content" hint="Seconds"/>
+                </TableRow>
+                <TableRow width="wrap_content" height="wrap_content" orientation="horizontal" gravity="center_vertical">
+                    <TextView text="Max:" textColor="@color/gray160" marginRight="@dimen/auto_padding"/>
+                    <EditText name="maxDur" width="50px" height="wrap_content" hint="Seconds"/>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout width="wrap_content" height="wrap_content" orientation="vertical">
+
+            <RadioGroup name="sampleFade" width="wrap_content" height="wrap_content" orientation="vertical" marginBottom="@dimen/auto_margin">
+                <TextView text="Fade" textColor="@color/gray160"/>
+                <RadioButton name="fadeNone" text="None"/>
+                <RadioButton name="fadeIn" text="In"/>
+                <RadioButton name="fadeOut" text="Out"/>
+                <RadioButton name="fadeRandomStereo" text="Random (Stereo)"/>
+                <RadioButton name="fadeRandomMono" text="Random (Mono)"/>
+            </RadioGroup>
+
+            <LinearLayout name="velocityControl" width="wrap_content" height="wrap_content" orientation="vertical" marginBottom="@dimen/auto_margin">
+                <TextView text="Velocity controls" textColor="@color/gray160"/>
+                <CheckBox name="velocityAmplitude" text="Amplitude"/>
+                <CheckBox name="velocityPitch" text="Pitch"/>
+                <CheckBox name="velocityOffset" text="Offset"/>
+                <CheckBox name="velocitySample" text="Sample"/>
+            </LinearLayout>
+
+            <CheckBox name="quantize" text="Quantize" foreground="@color/gray160"/>
+            <EditText name="bpm" width="50px" height="wrap_content" marginLeft="@dimen/auto_padding"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

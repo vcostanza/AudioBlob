@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="wrap_content" height="wrap_content" orientation="vertical" gravity="center_horizontal">
+
+    <TextView name="title" marginBottom="@dimen/auto_margin"/>
+
+    <LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal">
+
+        <LinearLayout name="btn_file" style="@style/tile_button" marginRight="@dimen/auto_margin">
+            <ImageView src="folder" style="@style/tile_button_image"/>
+            <TextView text="Browse\nFile(s)" gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout name="btn_sample" style="@style/tile_button">
+            <ImageView src="instrument" style="@style/tile_button_image"/>
+            <TextView text="Existing\nSample" gravity="center_horizontal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

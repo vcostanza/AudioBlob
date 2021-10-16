@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="match_parent" height="wrap_content" orientation="vertical" padding="@dimen/auto_margin" gravity="center_vertical" background="@color/background">
+
+    <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" gravity="center_vertical" marginBottom="@dimen/auto_padding">
+        <EditText name="name" width="0" height="wrap_content" weight="1" marginRight="@dimen/auto_padding" hint="Track name" tip="The name of the track"/>
+        <ImageButton name="color" width="20px" height="20px"/>
+    </LinearLayout>
+
+    <ComboBox name="instrument" width="match_parent" height="wrap_content" focusable="false" marginBottom="@dimen/auto_padding"/>
+
+    <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" gravity="center_vertical" weightSum="1">
+        <TextView text="BPM:" marginRight="@dimen/auto_padding"/>
+        <EditText name="bpm" width="0" height="wrap_content" weight="0.5"/>
+    </LinearLayout>
+
+</LinearLayout>

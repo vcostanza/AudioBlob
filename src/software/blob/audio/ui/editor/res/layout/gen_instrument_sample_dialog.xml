@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+
+    <ComboBox name="instrument" width="match_parent" height="wrap_content" focusable="false"/>
+    <ComboBox name="sample" width="match_parent" height="wrap_content" focusable="false"/>
+
+</LinearLayout>

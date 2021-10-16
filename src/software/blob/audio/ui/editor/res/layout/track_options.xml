@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal" background="@color/background">
+    <ImageButton name="edit" src="pencil" style="@style/toolbar_button"/>
+    <ImageButton name="delete" src="delete" style="@style/toolbar_button"/>
+</LinearLayout>

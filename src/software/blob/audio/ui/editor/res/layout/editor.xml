@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="match_parent" height="match_parent" orientation="vertical" paddingBottom="@dimen/auto_margin" background="@color/background">
+
+    <!-- Menu and stats bar -->
+    <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" gravity="center_vertical">
+        <include name="menu" layout="@layout/editor_menu"/>
+        <Spacer width="0" height="1px" weight="1"/>
+        <TextView name="version" text="Test" textColor="@color/gray160" textSize="12px" paddingRight="@dimen/auto_margin"/>
+    </LinearLayout>
+
+    <!-- Playback control and mode buttons -->
+    <LinearLayout name="header" width="match_parent" height="wrap_content" orientation="horizontal" padding="@dimen/auto_padding">
+        <ImageButton name="play" src="play" style="@style/toolbar_button"/>
+        <ImageButton name="pause" src="pause" visibility="gone" style="@style/toolbar_button"/>
+        <ImageButton name="stop" src="stop" style="@style/toolbar_button"/>
+        <ImageButton name="skip_start" src="skip_start" style="@style/toolbar_button"/>
+        <ImageButton name="skip_end" src="skip_end" style="@style/toolbar_button"/>
+        <ImageButton name="record" src="record" style="@style/toolbar_button"/>
+        <Spacer width="0" height="@dimen/tb_btn_size" weight="1"/>
+        <EditorModeButton name="mode_click" mode="click" src="mouse_cursor" style="@style/toolbar_button"/>
+        <EditorModeButton name="mode_select" mode="select" src="text_cursor" style="@style/toolbar_button"/>
+        <EditorModeButton name="mode_box_select" mode="box_select" src="select_box" style="@style/toolbar_button"/>
+        <EditorModeButton name="mode_pan" mode="pan" src="hand" style="@style/toolbar_button"/>
+        <EditorModeButton name="mode_draw" mode="draw" src="pencil" style="@style/toolbar_button"/>
+    </LinearLayout>
+
+    <LinearLayout name="body" width="match_parent" height="0" weight="1" orientation="horizontal">
+
+        <!-- Left side toolbar -->
+        <LinearLayout name="leftSidebar" style="@style/sidebar">
+            <SidebarButton src="tracks" text="Tracks" view="tracks" style="@style/sidebar_button"/>
+        </LinearLayout>
+
+        <!-- Left side pane -->
+        <LinearLayout style="@style/sidebar_container">
+            <ListView name="tracks" style="@style/sidebar_list"/>
+        </LinearLayout>
+
+        <LinearLayout name="editorContainer" width="0" height="match_parent" weight="1" orientation="vertical">
+            <!-- AudioEditor goes here -->
+        </LinearLayout>
+
+        <!-- Ride side pane -->
+        <LinearLayout visibility="gone" style="@style/sidebar_container">
+            <ListView name="trackLayers" style="@style/sidebar_list"/>
+            <ListView name="patterns" style="@style/sidebar_list"/>
+        </LinearLayout>
+
+        <!-- Right side toolbar -->
+        <LinearLayout name="rightSidebar" style="@style/sidebar">
+            <SidebarButton src="layers" text="Layers" view="trackLayers" style="@style/sidebar_button"/>
+            <SidebarButton src="patterns" text="Patterns" view="patterns" style="@style/sidebar_button"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

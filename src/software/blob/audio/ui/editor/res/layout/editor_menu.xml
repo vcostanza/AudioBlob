@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MenuBar width="wrap_content" height="wrap_content">
+    <MenuView name="menu_file" title="File">
+        <MenuItemView name="new_project" title="New Project" icon="new_file"/>
+        <MenuItemView name="open_project" title="Open Project" icon="open" hotkey="ctrl+o"/>
+        <MenuView name="open_recent" title="Open Recent"/>
+        <MenuItemView name="save_project" title="Save Project" icon="save" hotkey="ctrl+s"/>
+        <MenuItemView name="save_project_as" title="Save Project As..." icon="save_as"/>
+        <Separator/>
+        <MenuItemView name="import_wav" title="Import WAV" icon="menu_sound_import" hotkey="ctrl+i"/>
+        <MenuItemView name="export_wav" title="Export WAV" icon="menu_sound_export" hotkey="ctrl+e"/>
+        <MenuItemView name="record" title="Record WAV/MIDI" icon="menu_record" hotkey="ctrl+r"/>
+        <MenuItemView name="load_instrument" title="Load Instrument"/>
+        <MenuItemView name="generate_instrument" title="Generate Instrument"/>
+    </MenuView>
+    <MenuView name="menu_edit" title="Edit">
+        <MenuItemView name="undo" title="Undo" hotkey="ctrl+z"/>
+        <MenuItemView name="redo" title="Redo" hotkey="ctrl+shift+z"/>
+        <Separator/>
+        <MenuItemView name="cut" title="Cut" hotkey="ctrl+x"/>
+        <MenuItemView name="copy" title="Copy" hotkey="ctrl+c"/>
+        <MenuItemView name="paste" title="Paste" hotkey="ctrl+v"/>
+        <MenuItemView name="delete" title="Delete" hotkey="delete"/>
+        <Separator/>
+        <!--<MenuItemView name="apply_edit" title="Apply Edit" hotkey="enter"/>
+        <MenuItemView name="set_note" title="Set Note" hotkey="ctrl+n"/>
+        <MenuItemView name="set_note_quick" title="Set Note (Quick)"/>-->
+        <MenuItemView name="quantize" title="Quantize Notes"/>
+        <MenuItemView name="quantize_quick" title="Quick Quantize" hotkey="ctrl+q"/>
+        <MenuItemView name="set_bpm" title="Set BPM"/>
+    </MenuView>
+    <MenuView name="menu_select" title="Select">
+        <MenuItemView name="select_all" title="All" hotkey="ctrl+a"/>
+        <MenuItemView name="select_none" title="None" hotkey="escape"/>
+        <Separator/>
+        <MenuItemView name="create_pattern" title="Create Pattern" hotkey="ctrl+p"/>
+        <MenuItemView name="break_pattern" title="Break Pattern" hotkey="ctrl+shift+p"/>
+    </MenuView>
+    <MenuView name="menu_mode" title="Mode">
+        <MenuItemView name="mode_select" title="Time Select" hotkey="s"/>
+        <MenuItemView name="mode_box_select" title="Box Select" hotkey="b"/>
+        <MenuItemView name="mode_click" title="Click" hotkey="c"/>
+        <MenuItemView name="mode_pan" title="Pan" hotkey="g"/>
+        <MenuItemView name="mode_draw" title="Draw" hotkey="d"/>
+    </MenuView>
+    <MenuView name="menu_playback" title="Playback">
+        <MenuItemView name="toggle_playback" title="Play/Pause" hotkey="space"/>
+        <MenuItemView name="toggle_playback_loop" title="Play/Pause (Loop)" hotkey="shift+space"/>
+    </MenuView>
+    <MenuView name="menu_view" title="View">
+        <MenuItemView name="zoom_in" title="Zoom In" hotkey="ctrl+="/>
+        <MenuItemView name="zoom_out" title="Zoom Out" hotkey="ctrl+-"/>
+        <MenuItemView name="zoom_fit" title="Zoom Fit" hotkey="ctrl+9"/>
+        <MenuItemView name="zoom_reset" title="Reset Zoom" hotkey="ctrl+0"/>
+        <Separator/>
+        <MenuItemView name="amplitude_shading" title="Amplitude Shading" hotkey="F2"/>
+        <MenuItemView name="bpm_markers" title="BPM Markers" hotkey="F3"/>
+        <MenuItemView name="bpm_misalignment" title="Highlight Misaligned Notes" hotkey="F4"/>
+    </MenuView>
+</MenuBar>

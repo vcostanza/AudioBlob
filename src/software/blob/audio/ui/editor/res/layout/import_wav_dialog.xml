@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+
+    <CheckBox name="insertTimeCode" text="Insert at current time code" selected="true" focusable="false"/>
+
+    <CheckBox name="scanPitch" text="Scan pitch" focusable="false" marginBottom="@dimen/auto_padding"/>
+
+    <TableLayout name="pitchScanParams" width="match_parent" height="wrap_content" orientation="vertical" visibility="gone">
+
+        <TableRow width="match_parent" height="wrap_content" gravity="center_vertical" marginBottom="@dimen/auto_padding">
+            <TextView text="High Pass: " width="wrap_content" height="wrap_content"/>
+            <EditText name="highPass" width="0" height="wrap_content" weight="1" hint="Frequency (hz)" tip="Highest valid frequency to use for scanning"/>
+        </TableRow>
+
+        <TableRow width="match_parent" height="wrap_content" gravity="center_vertical" marginBottom="@dimen/auto_padding">
+            <TextView text="Low Pass: " width="wrap_content" height="wrap_content"/>
+            <EditText name="lowPass" width="0" height="wrap_content" weight="1" hint="Frequency (hz)" tip="Lowest valid frequency to use for scanning"/>
+        </TableRow>
+
+        <TableRow width="match_parent" height="wrap_content" gravity="center_vertical" marginBottom="@dimen/auto_padding">
+            <TextView text="Min Amp: " width="wrap_content" height="wrap_content"/>
+            <EditText name="minAmp" width="0" height="wrap_content" weight="1" hint="Amplitude" tip="Minimum amplitude cutoff"/>
+        </TableRow>
+
+        <TableRow width="match_parent" height="wrap_content" gravity="center_vertical">
+            <TextView text="Scan Window: " width="wrap_content" height="wrap_content"/>
+            <EditText name="scanWindow" width="0" height="wrap_content" weight="1" hint="Seconds" tip="Window of time to use for frequency scanning"/>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

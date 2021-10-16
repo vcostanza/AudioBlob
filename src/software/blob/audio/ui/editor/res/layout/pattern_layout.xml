@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PatternLayout width="match_parent" height="wrap_content" orientation="vertical" padding="@dimen/auto_padding" background="@color/black" borderColor="@color/gray85">
+    <TextView name="name" width="wrap_content" height="wrap_content" text="Pattern Name" textColor="@color/white" marginBottom="2px"/>
+    <PatternView name="pattern" width="match_parent" height="100px" background="@color/black" borderColor="@color/gray85"/>
+</PatternLayout>

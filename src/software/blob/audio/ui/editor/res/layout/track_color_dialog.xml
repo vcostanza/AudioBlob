@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal" gravity="center_vertical">
+
+    <!-- Color buttons are programmatically inserted here -->
+    <LinearLayout name="default_colors" width="wrap_content" height="wrap_content" orientation="vertical"/>
+
+    <ImageButton name="color_picker" width="32px" height="32px" padding="@dimen/auto_padding" src="color_picker" background="@color/background"/>
+
+</LinearLayout>

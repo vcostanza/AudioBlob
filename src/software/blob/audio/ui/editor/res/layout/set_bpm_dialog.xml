@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TableLayout width="match_parent" height="wrap_content" orientation="vertical" padding="@dimen/auto_margin" background="@color/background">
+
+    <TableRow width="match_parent" height="wrap_content" orientation="horizontal" gravity="center_vertical" marginBottom="@dimen/auto_padding">
+        <TextView text="Track:" textColor="@color/gray160" marginRight="@dimen/auto_padding"/>
+        <TextView name="track" text="Name"/>
+    </TableRow>
+
+    <TableRow width="match_parent" height="wrap_content" orientation="horizontal" gravity="center_vertical" marginBottom="@dimen/auto_padding">
+        <TextView text="Approx. BPM:" textColor="@color/gray160" marginRight="@dimen/auto_padding"/>
+        <EditText name="srcBPM" width="50px" height="wrap_content"/>
+    </TableRow>
+
+    <TableRow width="match_parent" height="wrap_content" orientation="horizontal" gravity="center_vertical" marginBottom="@dimen/auto_padding">
+        <TextView text="New BPM:" textColor="@color/gray160" marginRight="@dimen/auto_padding"/>
+        <EditText name="dstBPM" width="50px" height="wrap_content"/>
+    </TableRow>
+
+</TableLayout>
