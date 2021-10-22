@@ -54,7 +54,7 @@ if [ -z "${JDK_HOME}" ]; then
 fi
 
 # Build the JNI
-g++ -shared -fpic -g -std=c++14 -I$JAVA_HOME/include -I$JAVA_HOME/include/linux -L$shared_dir jsbsms.cpp -o $sbsms_jni -lsbsms
+g++ -shared -fpic -g -std=c++14 -I$JDK_HOME/include -I$JDK_HOME/include/linux -L$shared_dir jsbsms.cpp -o $sbsms_jni -lsbsms
 
 if [ -f "$sbsms_jni" ]; then
 	echo "Built SBSMS JNI successfully!"
