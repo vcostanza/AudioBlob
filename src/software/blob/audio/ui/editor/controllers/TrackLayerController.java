@@ -13,16 +13,16 @@ public class TrackLayerController extends EditorController implements EditorTrac
 
     // View layout for the buttons
     private final ListView layersList;
-    //private final TrackLayerAdapter layerAdapter;
+    private final TrackLayerAdapter layerAdapter;
 
     public TrackLayerController(AudioEditor editor) {
         super(editor);
         layersList = editor.getInflatedLayout().findByName("trackLayers");
-        //layersList.setAdapter(layerAdapter = new TrackLayerAdapter(editor));
+        layersList.setAdapter(layerAdapter = new TrackLayerAdapter(editor));
     }
 
     @Override
     public void onTrackSelected(Track track) {
-        //layerAdapter.refresh(track);
+        layerAdapter.refresh(track);
     }
 }
