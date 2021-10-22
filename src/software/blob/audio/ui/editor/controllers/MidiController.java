@@ -1,13 +1,18 @@
 package software.blob.audio.ui.editor.controllers;
 
 import software.blob.audio.effects.sbsms.SBSMSEffect;
-import software.blob.audio.ui.editor.events.*;
-import software.blob.audio.ui.editor.instruments.*;
 import software.blob.audio.playback.AudioHandle;
 import software.blob.audio.thread.callback.FinishCallback;
 import software.blob.audio.thread.callback.TaskCallback;
 import software.blob.audio.ui.editor.AudioEditor;
 import software.blob.audio.ui.editor.EditorProject;
+import software.blob.audio.ui.editor.events.EditorInstrumentListener;
+import software.blob.audio.ui.editor.events.EditorProjectListener;
+import software.blob.audio.ui.editor.events.EditorTrackListener;
+import software.blob.audio.ui.editor.events.MidiNoteListener;
+import software.blob.audio.ui.editor.instruments.Instrument;
+import software.blob.audio.ui.editor.instruments.InstrumentSample;
+import software.blob.audio.ui.editor.instruments.SampleWav;
 import software.blob.audio.ui.editor.layers.PianoRollLayer;
 import software.blob.audio.ui.editor.midi.MidiDeviceMonitor;
 import software.blob.audio.ui.editor.midi.MidiNote;
@@ -25,7 +30,6 @@ import javax.swing.*;
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.*;
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -62,6 +66,8 @@ public class MidiController extends EditorController implements
     }
 
     private void loadInstrument(Instrument instrument) {
+        if (instrument == null || !instrument.isInterpolationSupported())
+            return;
         for (int i = 36; i <= 84; i++)
             loadSample(instrument, i);
     }
