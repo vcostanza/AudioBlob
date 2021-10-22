@@ -105,12 +105,13 @@ public class AudioEditor extends View {
     private Robot robot;
     private long lastKeepAwake;
 
-    public AudioEditor(AudioEditorFrame frame, InflatedLayout layout) {
+    public AudioEditor(File baseDir, AudioEditorFrame frame, InflatedLayout layout) {
         this.frame = frame;
         this.layout = layout;
         this.prefs = Preferences.userNodeForPackage(getClass());
         this.body = layout.findByName("body");
 
+        setBaseDirectory(baseDir);
         setBackground(Color.BLACK);
 
         try {

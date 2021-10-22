@@ -52,8 +52,7 @@ public class AudioBlobApp {
 
         // Create the audio editor
         AudioEditorFrame frame = new AudioEditorFrame();
-        final AudioEditor editor = new AudioEditor(frame, inf);
-        editor.setBaseDirectory(baseDir);
+        final AudioEditor editor = new AudioEditor(baseDir, frame, inf);
 
         // Shutdown operations
         SecurityManager sm = System.getSecurityManager();
