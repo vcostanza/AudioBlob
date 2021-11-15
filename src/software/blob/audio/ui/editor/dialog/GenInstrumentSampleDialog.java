@@ -11,6 +11,7 @@ import software.blob.audio.ui.editor.instruments.Instrument;
 import software.blob.audio.ui.editor.instruments.InstrumentSample;
 import software.blob.audio.ui.editor.midi.MidiNote;
 import software.blob.audio.ui.editor.track.Track;
+import software.blob.audio.util.Misc;
 import software.blob.audio.wave.WavData;
 import software.blob.ui.util.DialogUtils;
 import software.blob.ui.view.dialog.LayoutDialog;
@@ -83,8 +84,9 @@ public class GenInstrumentSampleDialog extends LayoutDialog implements MidiNoteL
     protected void onOK() {
         super.onOK();
 
+        InstrumentSample sample = (InstrumentSample) sampleBox.getSelectedItem();
         WavData wav = getSampleWav();
-        if (wav == null)
+        if (sample == null || wav == null)
             return;
 
         GenInstrument inst = GenInstrument.create(editor);
@@ -93,6 +95,12 @@ public class GenInstrumentSampleDialog extends LayoutDialog implements MidiNoteL
 
         GenInstrumentParams params = new GenInstrumentParams();
         params.minDuration = params.maxDuration = wav.duration;
+
+        // Set the name of the instrument to the name of the sample with the original note in parentheses
+        // But only if the name of the sample isn't the same as the note
+        String noteName = Misc.getNoteName(sample.note);
+        if (!noteName.equals(wav.name))
+            inst.setName(wav.name + " (" + noteName + ")");
 
         inst.setSeedWav(wav);
         inst.setParams(params);

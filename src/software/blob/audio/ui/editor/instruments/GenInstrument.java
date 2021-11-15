@@ -4,20 +4,20 @@ import software.blob.audio.effects.sbsms.SBSMSEffect;
 import software.blob.audio.effects.sbsms.SBSMSTask;
 import software.blob.audio.effects.volume.AmplitudeModulator;
 import software.blob.audio.effects.volume.FadeEffect;
-import software.blob.audio.ui.editor.AudioEditor;
-import software.blob.audio.ui.editor.instruments.GenInstrumentParams.*;
 import software.blob.audio.thread.WavProcessorService;
 import software.blob.audio.thread.callback.MessageCallback;
 import software.blob.audio.thread.callback.MultiTaskCallback;
 import software.blob.audio.thread.callback.TaskCallback;
+import software.blob.audio.ui.editor.AudioEditor;
+import software.blob.audio.ui.editor.instruments.GenInstrumentParams.*;
 import software.blob.audio.ui.editor.midi.MidiDeviceType;
 import software.blob.audio.ui.editor.midi.MidiNote;
 import software.blob.audio.util.Misc;
+import software.blob.audio.util.MutableInt;
 import software.blob.audio.wave.WavData;
 import software.blob.ui.util.DialogUtils;
 import software.blob.ui.util.FileUtils;
 import software.blob.ui.util.Log;
-import software.blob.audio.util.MutableInt;
 
 import javax.sound.midi.MidiDevice;
 import java.io.File;
@@ -55,13 +55,27 @@ public abstract class GenInstrument extends Instrument {
         this.interpolate = false;
     }
 
+    /**
+     * Set the name of this instrument
+     * @param name Instrument name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String getName() {
-        if (seedWav != null)
-            return seedWav.name;
-        else if (seedFile != null)
-            return FileUtils.stripExtension(seedFile) + " (G)";
-        return "Generated";
+        // Default name if none has been set
+        if (this.name == null) {
+            if (seedWav != null)
+                return seedWav.name;
+            else if (seedFile != null)
+                return FileUtils.stripExtension(seedFile) + " (G)";
+            return "Generated";
+        }
+
+        // Use set name
+        return super.getName();
     }
 
     public void setParams(GenInstrumentParams params) {
