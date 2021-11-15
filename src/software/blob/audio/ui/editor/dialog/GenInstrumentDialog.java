@@ -30,8 +30,6 @@ public class GenInstrumentDialog extends LayoutDialog implements ClickListener, 
         super(window);
         this.editor = editor;
 
-        // TODO: Tile button dialog
-
         InflatedLayout inf = LayoutInflater.inflate("gen_instrument_dialog");
 
         titleTxt = inf.findByName("title");
